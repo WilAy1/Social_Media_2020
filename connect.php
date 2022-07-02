@@ -3,8 +3,8 @@
   ini_set("date.timezone",  "Africa/Lagos");
   $dbhost  = 'localhost'; 
   $dbname  = 'students_connect';
-  $dbuser  = 'root';
-  $dbpass  = 'ibunkunoluwa';
+  $dbuser  = '';
+  $dbpass  = '';
   $connection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
   if ($connection->connect_error) die($connection->connect_error);
 
