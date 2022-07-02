@@ -1,0 +1,106 @@
+@media screen and (min-width: 617px) and (min-height: 350px) {
+.part1{
+    float: left;
+    display: block;
+    
+}
+#pt1pst {
+    list-style-type: disc;
+}
+#allpsts1, #upds {
+    display: block;
+    float: none;
+}
+#set {
+    float: none;
+    padding-left: 2px;
+}
+.othsettings {
+    float: right;
+    width: 30%;
+    overflow: hidden;
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: .5em;
+}
+.tpheading{
+    background-color: #bbb;
+    padding: .1em .3em;
+    margin-top: 0;
+    color: #fff;
+    font-size: 1.6em;
+    font-weight: normal;
+    text-shadow: 0 1px 0 #777;
+    -moz-box-shadow: 1px 1px 15px #999 inset;
+    -webkit-box-shadow: 1px 1px 15px #999 inset;
+    box-shadow: 1px 1px 15px #999 inset;
+}
+.lts {
+    float: left;
+    max-width: 60%;
+    min-width: 260px;
+}
+.group {
+    border: 1px solid #999;
+    background: #f3f3f3;;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: 2px 2px 5px #ccc;
+    -webkit-box-shadow: 2px 2px 5px;
+    box-shadow: 2px 2px 5px;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+#setul {
+    vertical-align: middle;
+}
+#set a{
+    text-decoration: none;
+    color: black;
+}
+#set a:hover{
+    background-color: inherit;
+}
+#set {
+    position: relative;
+    display: block;
+    
+}
+
+#set .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+#set .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+#set:hover .tooltiptext {
+    visibility: visible;
+}
+#set .tooltiptext {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#set:hover .tooltiptext {
+    opacity: 1;
+}
+}

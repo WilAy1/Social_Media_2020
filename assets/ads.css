@@ -1,0 +1,48 @@
+.on_top_of_all {
+    width: 100%;
+    min-height: 70px;
+    background-color: rgb(255, 50, 50);
+    white-space: nowrap;
+}
+.on_top_of_all div {
+    display: inline-block;
+}
+.t_f_tophead {
+font-size: 22px;
+padding: 20px;
+}
+.t_f_tophead a{
+    color: white;
+    text-decoration: none;
+}
+body {
+    margin:0px;
+}
+.threesmalldashes {
+    color: white;
+    float: right;
+    padding: 20px;
+    font-size: 22px;
+    cursor: pointer;
+}
+.cong_1 {
+    width: 85%;
+    margin: auto;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    border-radius: 6px;
+}
+main {
+    margin: 5px;
+}
+.ert_12 {
+    width: 200px;
+    height: 200px;
+}
+.subject_image {
+    width: fit-content;
+    margin: auto;
+}
+.fu_un {
+    width: fit-content;
+    margin: auto;
+}

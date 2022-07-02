@@ -1,0 +1,23 @@
+SignUp{
+Names of universities
+List of courses
+Are you a student or an aspirant
+student {
+    choose the course you are studying
+}
+aspirant {
+    aspiring course/courses
+}
+
+NIN
+username 
+
+
+later in the future(jamb reg)
+
+
+}
+
+profile {
+    header-links: ;
+}

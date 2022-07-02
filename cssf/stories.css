@@ -1,0 +1,129 @@
+.sto_page {
+    font-size: 13px;
+}
+.sto_upld {
+    display: flex;
+    margin-top: 10px;
+}
+.sto_name, .sto_plus, .mo_sto_name {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.sto_plus {
+    margin-left: auto;
+    padding-right: 15px;
+}
+.sto_capt {
+    bottom: 50px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+.sto_imge {
+    width: 95%;
+    bottom: 50%;
+    margin: auto;
+    position: relative;
+    top: 80px;
+    margin: auto;
+    display: flex;
+}
+.sto_pic, .mo_sto_pic {
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.sto_usr, .mo_sto_usr {
+    font-size: 12px;
+}
+.sto_fme {
+    font-size: 15px;
+    border-bottom: 1px solid #bebebe;
+    padding: 5px 5px;
+    margin: 2px 0px 2px 0px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.my_sto {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bebebe;
+}
+.sto_preview {
+    display: none;
+    background-color: black;
+    color: white;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+.sto_img {
+    width: 100%;
+    top: 50%;
+    bottom: 50%;
+    position: fixed;
+    margin:auto;    
+}
+.sto_img_plan {
+    bottom: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+}
+.sto_alat {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.sto_ppr {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border: 1px solid #bebebe;
+    margin: 4px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+.cctive {
+    border-color: blue;
+}
+.sto_fill_cap {
+    width: 86%;
+    resize: none;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+}
+.sto_cap {
+    display: flex;
+}
+.sto_send {
+    margin: auto 10px;
+}
+.sto_close,.sto_view_close {
+    font-size: 17px;
+    top: 55px;
+    position: fixed;
+    left: 15px;
+    z-index: 1;
+}
+.sto_view {
+    display: none;
+    background-color: black;
+    color: white;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}

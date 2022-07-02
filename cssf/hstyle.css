@@ -1,0 +1,90 @@
+@media screen and (min-width: 800px) and (min-height: 350px) {   
+.shp{
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 13.5px;
+}
+.anamps {
+    box-shadow: 1px 1px 1px 1px rgb(15, 15, 15, 0.2) !important;
+    width: 90% !important;
+    margin-top: 2px; 
+}
+.raimg {
+    height: 30px;
+    width: 30px;
+    background-repeat: no-repeat; 
+    background-size: 100%; 
+    border-radius: 100%;
+    margin: 3px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.lwpe {
+    margin-left: 15px;
+}
+.tlspw {
+    overflow: auto;
+    white-space: nowrap;
+    box-shadow: 1px 1px 1px 1px rgb(15,15,15,0.4);
+    width: 100%;
+    margin: auto;   
+}
+.ttdylst {
+    overflow: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.tcontainer {
+    display: flex;
+}
+.h_h_nm {
+    width: 97%;
+    font-size: 14px;
+}
+.ta_rl_t {
+    margin: auto;
+}
+.ttdyh {
+    text-align: center;
+}
+.trendingtoday {
+    margin: 6px;
+}
+.adpost {
+    display: none !important;
+}
+.mspsticon {
+    display: none !important;
+}
+.t_fck_S_mr {
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    cursor: pointer;
+}
+.srchtb {
+    width: 95%;
+    margin: auto;
+    border-radius: 20px;
+    height: 30px;
+}
+.srchtb[placeholder], .srchtb[value] {
+    padding-left: 4px;
+}
+.srchside {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 4px;
+}
+.srchside form{
+    display: flex;
+}
+.hsearchbtn{
+    background-color: inherit;
+    border-radius: 50%;
+    margin: auto;
+    margin-left: 3px;
+    height: 30px;
+}
+}

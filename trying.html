@@ -1,0 +1,215 @@
+<!--<style>
+#canvastrial {
+    border: 1px solid;
+    background-color: white;
+}
+.clock {
+    border: 1px solid;
+    background-color: #333;
+}
+</style>
+<canvas height='500' width='1000' id='canvastrial'></canvas>
+<canvas height='300' width='300' id='clock'></canvas>
+<script>
+    var canvas = document.getElementById('canvastrial');
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = 'rgb(90, 90, 90)';
+    ctx.fillRect(0, 0, 300, 200);
+    ctx.moveTo(0, 0);
+    ctx.lineTo(300, 200);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(150, 100, 40, 0, 2*Math.PI);
+    ctx.stroke();
+    var grd = ctx.createLinearGradient(0,0, 200, 0);
+    grd.addColorStop(0, "red");
+    grd.addColorStop(1, "green");
+    ctx.fillStyle = grd;
+    ctx.fillRect(0, 201, 300, 200);
+    grd.addColorStop(0, "red");
+    grd.addColorStop(0.2, "green");
+    grd.addColorStop(0.4, "blue");
+    grd.addColorStop(0.6, "yellow");
+    grd.addColorStop(0.8, "orange");
+    grd.addColorStop(1, "black");
+    ctx.fillStyle = grd;
+    ctx.font = "30px arial";
+    ctx.fillText("WilAy the boss", 0, 431);
+    ctx.strokeText("WilAy the boss", 0, 471);
+    ctx.font = "30px Comic Sans MS";
+ctx.fillStyle = "red";
+ctx.textAlign = "center";
+ctx.fillText("Boss Mikun", canvas.width/2, canvas.height/2);
+var canvas = document.getElementById('clock');
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+drawClock();
+function drawClock() {
+    ctx.arc(0, 0, radius, 0 , 2*Math.PI);
+    ctx.fillStyle = "white";
+    ctx.fill();
+    ctx.beginPath();
+    ctx.arc(0, 0, radius*0.1, 0, 2*Math.PI);
+    ctx.fillStyle = '#333';
+    ctx.fill();
+    ctx.font = radius*0.15+"px arial";
+    ctx.textBaseLine = 'middle';
+    ctx.textAlign = 'center';
+    for(num=1; num < 13; num++){
+        ang = num * Math.PI / 6;
+        ctx.rotate(ang);
+        ctx.translate(0, -radius*0.85);
+        ctx.rotate(-ang);
+        ctx.fillText(num.toString(), 0, 0);
+        ctx.rotate(ang);
+        ctx.translate(0, radius*0.85);
+        ctx.rotate(-ang);
+    }
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+(minute*Math.PI/(6*60))+(second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+    function drawHand(ctx, pos, length, width){
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+    }
+}
+setInterval(drawClock, 1000);
+
+</script>
+
+<img id="scream" width="220" height="277"
+src="../Students_connect_hidden/users_profile_upload/WilAy.png" alt="The Scream">
+
+<p>Canvas:</p>
+
+<canvas id="myCanvas" width="240" height="297"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+window.onload = function() {
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var img = document.getElementById("scream");
+   ctx.drawImage(img, 10, 10);
+};
+</script>
+<style>
+    .talk-bubble {
+        margin: 40px;
+        display: inline-block;
+        position: relative;
+        width: 200px;
+        height: auto;
+        background-color: lightyellow;
+    }
+    .round {
+        border-radius: 30px;
+    }
+    .talktext {
+        padding: 1em;
+        text-align: left;
+        line-height: 1.5em;
+    }
+    .tri-right.right-in:after{
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: auto;
+        right: -20px;
+        /*top: 38px;*/
+        bottom: 20px;
+        border: 12px solid;
+        border-color:  transparent transparent lightyellow lightyellow;
+    }
+</style>
+<div class="talk-bubble tri-right round right-in">
+    <div class="talktext">
+        <p>Hello my guys how are you</p>
+    </div>
+</div>-->
+<button id='absc'>Record</button>
+<button id='pause'>Pause</button>
+<a href='' id='erro'>download</a>
+<div ></div>
+<script>
+
+  navigator.getUserMedia = navigator.getUserMedia ||
+  navigator.webkitgetUserMedia ||
+  navigator.mozgetUserMedia ||
+  navigator.msgetUserMedia;
+  
+var constraints = {
+    audio: true,
+    video: false,
+  }
+  var AudioContext = window.AudioContext || window.webkitAudioContext;
+  var audiocontext;
+  document.getElementById('absc').onclick= function(){
+        navigator.mediaDevices.getUserMedia(constraints).then(function(stream){
+            audiocontext = new AudioContext();
+      
+            
+            var mic = audiocontext.createMediaStreamSource(stream);
+            
+            let stop = false;
+  
+    const chunks = [];
+    const options  = {mimeType: 'audio/webm'}
+    const mer = new MediaRecorder(stream, mic);
+    var au = document.querySelector('div');
+     au.innerHTML = audiocontext.sampleRate/1000;
+    mer.ondataavailable =  function(e){
+      console.log(e.data);
+        if(e.data.size > 0){
+      chunks.push(e.data)
+      console.log(chunks)
+    }
+    
+    }
+    document.getElementById('pause').onclick = function(){
+    stop = true;
+        console.log(stop)
+}
+    setInterval(function(){
+        console.log(stop)
+        if(stop == true){
+      mer.stop();
+    }
+    }, 1000)
+    
+    mer.onstop = function(e){
+      document.getElementById('erro').href = URL.createObjectURL(new Blob(chunks));
+      document.getElementById('erro').download = 'test.wav';
+    
+    }
+    mer.start(); 
+}
+        )}
+  var recorded = [];
+  for(g in navigator){
+document.write(navigator[g],"<br/>")
+  }
+</script>
+<img src='/students_connect/fl/rlds/index.php?i=1&postuploads&0' width=200 height=200>
